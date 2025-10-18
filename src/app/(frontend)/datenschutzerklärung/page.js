@@ -4,8 +4,14 @@ const page = () => {
   return (
     <>
     <section className="max-w-3xl mx-auto p-6 prose">
+        <div className='py-100'>
+                <div  className='container'>
+                 <h1>Datenschutzerklärung</h1>
+                </div>
+            </div>
+             <div className='py-50'>
         <div className='container'>
-            <h1>Datenschutzerklärung</h1>
+          
             <p><strong>Stand:</strong> 18.10.2025</p>
 
 
@@ -102,6 +108,7 @@ const page = () => {
             <li>Interne Empfänger: Fachabteilungen (need-to-know)</li>
             </ul>
             </div>
+        </div>
 </section>
 </>
   )

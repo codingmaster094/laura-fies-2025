@@ -2,13 +2,16 @@ import React from 'react'
 
 const page = () => {
     return (
-        <section className="max-w-3xl mx-auto p-6 prose">
-            <div  className='container'>
-            <div>
-            <h1>Impressum</h1>
+        <section className="">
+            <div className='py-100'>
+                <div  className='container'>
+                <h1>Impressum</h1>
+                </div>
             </div>
+            <div  className='container'>
+            
 
-            <div>
+            <div className='py-50'>
                 <h3>MeaNova GmbH</h3>
                    <p>Salzstraße 8<br/>
                     85622 Feldkirchen<br/>
