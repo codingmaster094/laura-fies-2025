@@ -64,83 +64,112 @@ export default function FAQ({ Section_Show, title, FAQ_Data }) {
 
   return (
     Section_Show ?
-      <section className="py-20">
-        <div className="container">
-          <div className="flex flex-col gap-32 lg:gap-48 justify-center items-center text-center">
-            <h2 className="text-h2/snug font-jakarta font-normal">
-              {title || "FAQ zur Personalvermittlung in Nordrhein-Westfalen"}
-            </h2>
-            <div className="line max-w-225 w-full border-1 border-solid border-grey1"></div>
-          </div>
+    <section className="py-20">
+      <div className="container">
+        <div className="flex flex-col gap-32 lg:gap-48 justify-center items-center text-center">
+          <h2 className="text-h2/snug font-jakarta font-normal">
+            {title || "FAQ zur Personalvermittlung in Nordrhein-Westfalen"}
+          </h2>
+          <div className="line max-w-225 w-full border-1 border-solid border-grey1"></div>
+        </div>
 
-          {/* Accordion */}
-          <div className="space-y-32 mt-32 lg:mt-48">
-            {FAQ_Data.map((faq, index) => {
-              const content = faq.richText?.root?.children || [];
+        {/* Accordion */}
+        {/* <div className="space-y-32 mt-32 lg:mt-48">
+          {FAQ_Data.map((faq, index) => {
+            const answerText =
+              faq.richText?.root?.children?.[0]?.children?.[0]?.text || "";
 
-              // Function to recursively render Lexical JSON content
-              const renderContent = (nodes) => {
-                return nodes.map((node, i) => {
-                  if (node.type === "paragraph") {
-                    const text = node.children?.map((c) => c.text).join(" ") || "";
-                    return <p key={i} className="mb-4">{text}</p>;
-                  }
-
-                  if (node.type === "list") {
-                    const items = node.children || [];
-                    return (
-                      <ul key={i} className="list-disc pl-6 mb-4 space-y-2">
-                        {items.map((item, j) => {
-                          const itemText = item.children?.map((c) => c.text).join(" ") || "";
-                          return <li key={j}>{itemText}</li>;
-                        })}
-                      </ul>
-                    );
-                  }
-
-                  if (node.type === "listitem") {
-                    const itemText = node.children?.map((c) => c.text).join(" ") || "";
-                    return <li key={i}>{itemText}</li>;
-                  }
-
-                  if (node.type === "linebreak") {
-                    return <br key={i} />;
-                  }
-
-                  // Recursive fallback for nested structures
-                  if (node.children) {
-                    return <React.Fragment key={i}>{renderContent(node.children)}</React.Fragment>;
-                  }
-
-                  return null;
-                });
-              };
-
-              return (
-                <div
-                  key={faq.id || index}
-                  className={`accordion-item border border-dark rounded-2xl overflow-hidden ${index === 0 ? "active" : ""
-                    }`}
+            return (
+              <div
+                key={faq.id || index}
+                className={`accordion-item border-1 border-dark ${
+                  index === 0 ? "active" : ""
+                }`}
+              >
+                <button className="accordion-header w-full flex justify-between items-center px-24 py-24 text-left font-jakarta text-h3/snug cursor-pointer"
+                aria-label={faq.title}
                 >
-                  <button
-                    className="accordion-header w-full flex justify-between items-center px-6 py-4 text-left font-jakarta text-h3/snug cursor-pointer"
-                    aria-label={faq.title}
-                  >
-                    <span>{faq.title}</span>
-                    <span className="icon">+</span>
-                  </button>
-
-                  <div className="accordion-content overflow-hidden transition-all duration-500 ease-in-out">
-                    <div className="px-6 pb-6 text-dark text-base_sm leading-relaxed space-y-4">
-                      {renderContent(content)}
-                    </div>
+                  <span>{faq.title}</span>
+                  <span className="icon"></span>
+                </button>
+                <div className="accordion-content overflow-hidden transition-all duration-500 ease-in-out">
+                  <div className="px-24 pb-24 text-dark text-base_sm leading-relaxed space-y-16">
+                    <p>{answerText}</p>
                   </div>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
+        </div> */}
 
+        <div className="space-y-32 mt-32 lg:mt-48">
+  {FAQ_Data.map((faq, index) => {
+    const content = faq.richText?.root?.children || [];
+
+    // Function to recursively render Lexical JSON content
+    const renderContent = (nodes) => {
+      return nodes.map((node, i) => {
+        if (node.type === "paragraph") {
+          const text = node.children?.map((c) => c.text).join(" ") || "";
+          return <p key={i} className="mb-4">{text}</p>;
+        }
+
+        if (node.type === "list") {
+          const items = node.children || [];
+          return (
+            <ul key={i} className="list-disc pl-24 mb-20 space-y-8">
+              {items.map((item, j) => {
+                const itemText = item.children?.map((c) => c.text).join(" ") || "";
+                return <li key={j}>{itemText}</li>;
+              })}
+            </ul>
+          );
+        }
+
+        if (node.type === "listitem") {
+          const itemText = node.children?.map((c) => c.text).join(" ") || "";
+          return <li key={i}>{itemText}</li>;
+        }
+
+        if (node.type === "linebreak") {
+          return <br key={i} />;
+        }
+
+        // Recursive fallback for nested structures
+        if (node.children) {
+          return <React.Fragment key={i}>{renderContent(node.children)}</React.Fragment>;
+        }
+
+        return null;
+      });
+    };
+
+    return (
+      <div
+        key={faq.id || index}
+        className={`accordion-item border border-dark rounded-2xl overflow-hidden ${
+          index === 0 ? "active" : ""
+        }`}
+      >
+        <button
+          className="accordion-header w-full flex justify-between items-center px-24 py-24 text-left font-jakarta text-h3/snug cursor-pointer"
+          aria-label={faq.title}
+        >
+          <span>{faq.title}</span>
+          <span className="icon">+</span>
+        </button>
+
+        <div className="accordion-content overflow-hidden transition-all duration-500 ease-in-out">
+          <div className="px-24 pb-24 text-dark text-base_sm leading-relaxed space-y-16">
+            {renderContent(content)}
+          </div>
         </div>
-      </section> : null
+      </div>
+    );
+  })}
+</div>
+
+      </div>
+    </section> : null
   );
 }
