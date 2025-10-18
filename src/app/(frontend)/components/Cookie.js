@@ -184,7 +184,7 @@ export default function Cookie({
       role="dialog"
       aria-modal="true"
       aria-labelledby="cookie-banner-title"
-      className={`fixed inset-x-0 bottom-0 z-50 mx-auto w-full max-w-4xl rounded-t-2xl border border-neutral-200 bg-white p-4 shadow-2xl md:mb-6 md:rounded-2xl md:p-6 ${
+      className={`fixed inset-x-0 bottom-0 z-50 mx-auto w-full max-w-4xl rounded-t-2xl border border-neutral-200 bg-white p-16 shadow-2xl md:mb-24 md:rounded-2xl md:p-24 ${
         className || ""
       }`}
     >
