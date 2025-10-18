@@ -3,6 +3,7 @@
 import Header from "../(frontend)/header/page"; // <-- PROBLEM IS HERE
 import "../../../public/css/globals.css";
 import Footer from "../(frontend)/footer/page";
+import Cookie from "./components/Cookie";
 
 export default function RootLayout({ children }) {
   return (
@@ -11,6 +12,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+         <Cookie />
       </body>
     </html>
   );

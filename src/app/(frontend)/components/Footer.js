@@ -23,7 +23,7 @@ const Footer = ({ FooterData }) => {
           <div className="container">
             <div className="inner flex justify-start xlg:justify-between items-start gap-20 lg:gap-40 flex-wrap xl:flex-nowrap">
               {/* col1 */}
-              <div className='w-full sm:w-[calc(50%-20px)] md:w-[calc(33%-40px)] xlg:w-full'>
+              {/* <div className='w-full sm:w-[calc(50%-20px)] md:w-[calc(33%-40px)] xlg:w-full'>
                 {footerlogo.url && ( // Only render if the URL exists
                   <Link href="/">
                     <Image
@@ -36,7 +36,7 @@ const Footer = ({ FooterData }) => {
                     />
                   </Link>
                 )}
-              </div>
+              </div> */}
               {/* col2 */}
               <div className='foot-col1 flex flex-col gap-16 md:gap-32 w-full sm:w-[calc(50%-20px)] md:w-[calc(33%-40px)] xlg:w-full'>
                 <span className="font-jakarta font-medium text-h4">Kontakt</span>
@@ -44,7 +44,7 @@ const Footer = ({ FooterData }) => {
                   {kontakt.address && (
                     <li>
                       <div className="flex items-start gap-8">
-                        <Image src="/images/company-icon.svg" alt="icon of location" role="img" width={20} height={20} className='w-20 h-20' />
+                        <Image src="/images/location.svg" alt="icon of location" role="img" width={20} height={20} className='w-20 h-20' />
                         <span dangerouslySetInnerHTML={{__html:kontakt.address}}></span>
                       </div>
                     </li>
@@ -66,7 +66,7 @@ const Footer = ({ FooterData }) => {
                     </li>
                   )}
                 </ul>
-                <div className='flex gap-16 justify-start items-center'>
+                {/* <div className='flex gap-16 justify-start items-center'>
                   {
                     social.map((item, i) => item.social_url ? ( // Check for URL again for the Link prop
                       <Link href={item.social_url} role="link" key={i}>
@@ -80,7 +80,7 @@ const Footer = ({ FooterData }) => {
                       </Link>
                     ) : null)
                   }
-                </div>
+                </div> */}
               </div>
               {/* col3 */}
               <div className='flex flex-col gap-16 md:gap-32 w-full sm:w-[calc(50%-20px)] md:w-[calc(33%-40px)] xlg:w-full'>
