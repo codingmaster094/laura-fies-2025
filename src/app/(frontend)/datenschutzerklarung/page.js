@@ -16,7 +16,7 @@ const page = () => {
 
 
 
-            <h2>1. Verantwortlicher</h2>
+            <h2>1. Verantwortlicher</h2>git
             <address>
             <strong>MeaNova GmbH</strong>
             <br />
