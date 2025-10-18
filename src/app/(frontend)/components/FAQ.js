@@ -147,7 +147,7 @@ export default function FAQ({ Section_Show, title, FAQ_Data }) {
     return (
       <div
         key={faq.id || index}
-        className={`accordion-item border border-dark rounded-2xl overflow-hidden ${
+        className={`accordion-item border border-dark overflow-hidden ${
           index === 0 ? "active" : ""
         }`}
       >
