@@ -186,4 +186,7 @@
   .swiper-button-prev,  .swiper-button-next{
     display:none !important;
   }
+  .swiper-wrapper {
+    padding-bottom: 50px !important;
+}
 }
