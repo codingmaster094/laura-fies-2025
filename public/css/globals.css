@@ -143,10 +143,10 @@
       transition-all duration-500 ease-in-out hover:text-primary hover:bg-white;
     }
     .foot-col1 > ul li:first-child{
-      @apply flex justify-start items-center
+      @apply flex justify-start items-center gap-8
     }
     .foot-col1 > ul li a{
-      @apply flex justify-start items-center
+      @apply flex justify-start items-center gap-8
     }
     .swiper-button-prev, .swiper-button-next{
       @apply relative z-10;
