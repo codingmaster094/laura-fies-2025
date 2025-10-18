@@ -15,7 +15,7 @@ const OffenStellen = (
 ) => {
     return (
         <>
-            <section className='relative py-32 md:py-70 xl:py-160'>
+            <section className='relative py-32 md:py-70 xl:py-160' id='jobs'>
                 <div className="relative z-10" id="Gebrauchtwagen">
                     <div className="container">
                         <div className="flex flex-col-reverse lg:flex-row gap-20 lg:gap-64 justify-center items-start xxl:items-center">

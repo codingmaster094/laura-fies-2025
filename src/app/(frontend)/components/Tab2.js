@@ -25,7 +25,7 @@ const Tab2 = ({ data }) => {
 
 
     return (
-        <section className="py-80 min-h-screen bg-gray-50">
+        <section className="py-80 min-h-screen bg-gray-50" id="personalvermittlung">
             <div className="container mx-auto">
                 {/* ====== MAIN TABS ====== */}
                 <div className="flex justify-center space-x-10 mb-32">
