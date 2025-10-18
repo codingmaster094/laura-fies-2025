@@ -7,7 +7,7 @@ const OffCanvas = ({ logo, menus, isOpen, onClose }) => {
   return (
     <div
       id="mobile-curtain"
-      className={`z-20 fixed top-0  w-full h-full bg-white transform transition-transform duration-300 ${isOpen ? "translate-y-0" : "-translate-y-[200%]"
+      className={`z-[99] fixed top-0  w-full h-full bg-white transform transition-transform duration-300 ${isOpen ? "translate-y-0" : "-translate-y-[200%]"
         }`}
     >
 
