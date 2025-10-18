@@ -209,11 +209,11 @@ export default function Cookie({
           )}
         </div>
 
-        <div className="flex shrink-0 items-center gap-2 md:justify-end">
+        <div className="flex shrink-0 items-center gap-2 md:justify-end flex-col">
           <button
             type="button"
             onClick={handleDeclineAll}
-            className="rounded-xl border border-neutral-300 px-3 py-2 text-sm"
+            className="border border-neutral-300 px-24 py-12 text-sm"
           >
             {texts.declineAllLabel}
           </button>
@@ -221,14 +221,14 @@ export default function Cookie({
             type="button"
             onClick={() => setShowSettings((s) => !s)}
             aria-expanded={showSettings}
-            className="rounded-xl border border-neutral-300 px-3 py-2 text-sm"
+            className="border border-neutral-300 px-24 py-12 text-sm"
           >
             {texts.settingsLabel}
           </button>
           <button
             type="button"
             onClick={handleAcceptAll}
-            className="rounded-xl bg-black px-3 py-2 text-sm text-white"
+            className="text-sm text-white btn-dark "
           >
             {texts.acceptAllLabel}
           </button>
