@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import OffCanvas from "./OffCanvas";
 import { usePathname } from "next/navigation";
+import Lenis from "@studio-freight/lenis/types";
 
 const Header = ({ HeaderData, MenusData }) => {
 
