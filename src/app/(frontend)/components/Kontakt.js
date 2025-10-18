@@ -8,7 +8,7 @@ const Kontakt = ({
 }) => {
     return (
         <>
-            <section className='py-32 md:py-50 lg:py-80'>
+            <section className='py-32 md:py-50 lg:py-80' id='kontakt'>
                 <div className="container">
                     <div className="inner flex justify-start items-start gap-32 xlg:gap-64 flex-col lg:flex-row">
                         <div className='w-full lg:w-1/2 inset-0 relative lg:sticky lg:top-20'>

@@ -45,7 +45,7 @@ const Footer = ({ FooterData }) => {
                     <li>
                       <div className="flex items-start gap-8">
                         <Image src="/images/location.svg" alt="icon of location" role="img" width={20} height={20} className='w-20 h-20' />
-                        <span>{kontakt.address}</span>
+                        <span dangerouslySetInnerHTML={{__html:kontakt.address}}></span>
                       </div>
                     </li>
                   )}
