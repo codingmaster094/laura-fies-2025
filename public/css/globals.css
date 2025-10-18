@@ -181,3 +181,9 @@
 .swiper-button-next svg,.swiper-button-prev svg{
   opacity:0;
 }
+
+@media (max-width:768px){
+  .swiper-button-prev,  .swiper-button-next{
+    display:none;
+  }
+}

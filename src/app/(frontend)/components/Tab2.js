@@ -90,7 +90,7 @@ const Tab2 = ({ data }) => {
                                 // Ab 1200px: 3 Slides, Paginierung deaktiviert
                                 1200: { slidesPerView: 3, spaceBetween: 32, pagination: { enabled: false } },
                                 // Ab 1024px: 2 Slides, Paginierung deaktiviert
-                                1024: { slidesPerView: 2, pagination: { enabled: false } },
+                                768: { slidesPerView: 2, pagination: { enabled: false } },
                                 // Ab 640px: 1 Slide, Paginierung aktiviert (Mobile)
                                 640: { slidesPerView: 1, pagination: { enabled: true } },
                             }}

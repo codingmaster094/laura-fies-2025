@@ -11,8 +11,8 @@ const Kontakt = ({
             <section className='py-32 md:py-50 lg:py-80'>
                 <div className="container">
                     <div className="inner flex justify-start items-start gap-32 xlg:gap-64 flex-col lg:flex-row">
-                        <div className='w-full lg:w-1/2 inset-0 relative md:sticky top-20'>
-                            <div className='space-y-16 relative md:sticky top-20'>
+                        <div className='w-full lg:w-1/2 inset-0 relative lg:sticky lg:top-20'>
+                            <div className='space-y-16 relative lg:sticky lg:top-20'>
                                 <div className="title text-h2/snug font-jakarta font-normal">
                                     <h2>{Heading}</h2>
                                 </div>
