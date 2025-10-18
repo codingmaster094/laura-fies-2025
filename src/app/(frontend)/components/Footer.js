@@ -43,7 +43,7 @@ const Footer = ({ FooterData }) => {
                 <ul className='md:space-y-8'>
                   {kontakt.address && (
                     <li>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-start gap-8">
                         <Image src="/images/location.svg" alt="icon of location" role="img" width={20} height={20} className='w-20 h-20' />
                         <span>{kontakt.address}</span>
                       </div>
@@ -51,7 +51,7 @@ const Footer = ({ FooterData }) => {
                   )}
                   {kontakt.phone_url && (
                     <li>
-                      <Link href={kontakt.phone_url} role='link' className="flex items-center gap-2">
+                      <Link href={kontakt.phone_url} role='link' className="flex items-start gap-8">
                         <Image src="/images/phone.svg" alt="icon of phone" role="img" width={20} height={20} className='w-20 h-20' />
                         <span>{kontakt.phone}</span>
                       </Link>
@@ -59,7 +59,7 @@ const Footer = ({ FooterData }) => {
                   )}
                   {kontakt.email_url && (
                     <li>
-                      <Link href={kontakt.email_url} role='link' className="flex items-center gap-2">
+                      <Link href={kontakt.email_url} role='link' className="flex items-start gap-8">
                         <Image src="/images/mail.svg" alt="icon of mail" role="img" width={20} height={20} className='w-20 h-20' />
                         <span>{kontakt.email}</span>
                       </Link>

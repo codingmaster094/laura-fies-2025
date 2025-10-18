@@ -11,7 +11,7 @@ const Header = ({ HeaderData, MenusData }) => {
     const pathname = usePathname();
     return (
         <>
-            <header className='py-31 relative sticky top-0'>
+            <header className='py-31 sticky top-0'>
                 <div className='container'>
                     <div className='flex justify-between items-center gap-50'>
                         <a href="#" aria-roledescription='link'>
