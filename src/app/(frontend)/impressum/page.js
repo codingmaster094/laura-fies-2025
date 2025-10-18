@@ -3,6 +3,7 @@ import React from 'react'
 const page = () => {
     return (
         <section className="max-w-3xl mx-auto p-6 prose">
+            <div  className='container'>
             <div>
             <h1>Impressum</h1>
             </div>
@@ -100,6 +101,7 @@ const page = () => {
                     und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch
                     gestattet, sofern nicht anders angegeben.
                 </p>
+           </div>
            </div>
         </section>
     )

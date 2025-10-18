@@ -4,6 +4,7 @@ const page = () => {
   return (
     <>
     <section className="max-w-3xl mx-auto p-6 prose">
+        <div className='container'>
             <h1>Datenschutzerklärung</h1>
             <p><strong>Stand:</strong> 18.10.2025</p>
 
@@ -100,6 +101,7 @@ const page = () => {
             <li>Auftragsverarbeiter: Vercel (Hosting/CDN), ggf. IT-Dienstleister für Wartung/Support</li>
             <li>Interne Empfänger: Fachabteilungen (need-to-know)</li>
             </ul>
+            </div>
 </section>
 </>
   )
