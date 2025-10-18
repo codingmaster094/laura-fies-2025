@@ -38,7 +38,7 @@ const Footer = ({ FooterData }) => {
                 )}
               </div> */}
               {/* col2 */}
-              <div className='foot-col1 flex flex-col gap-16 md:gap-32 w-full sm:w-[calc(50%-20px)] md:w-[calc(33%-40px)] xlg:w-full'>
+              <div className='foot-col1 flex flex-col gap-16 md:gap-32 w-full sm:w-[calc(50%-20px)] md:w-[calc(33%-40px)]  xlg:w-full'>
                 <span className="font-jakarta font-medium text-h4">Kontakt</span>
                 <ul className='md:space-y-8'>
                   {kontakt.address && (
