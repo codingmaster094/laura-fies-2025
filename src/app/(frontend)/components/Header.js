@@ -10,21 +10,21 @@ const Header = ({ HeaderData, MenusData }) => {
 
     const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
-      useEffect(() => {
-    const lenis = new Lenis();
+//       useEffect(() => {
+//     const lenis = new Lenis();
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+//     function raf(time) {
+//       lenis.raf(time);
+//       requestAnimationFrame(raf);
+//     }
 
-    requestAnimationFrame(raf);
-    window.lenis = lenis;
+//     requestAnimationFrame(raf);
+//     window.lenis = lenis;
 
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
+//     return () => {
+//       lenis.destroy();
+//     };
+//   }, []);
     return (
         <>
             <header className='py-31 sticky top-0 bg-white z-[99]'>
