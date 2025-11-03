@@ -3,7 +3,7 @@ import { getPayload } from 'payload'
 import { NextRequest, NextResponse } from 'next/server'
 import type { GlobalSlug } from 'payload'
 
-export const revalidate = 60
+export const dynamic = 'force-dynamic'
 
 export const GET = async (req: NextRequest) => {
   try {
@@ -17,19 +17,16 @@ export const GET = async (req: NextRequest) => {
         { status: 400 }
       )
     }
-
     const data = await payload.findGlobal({
       slug,
       depth: 2,
     })
-
     if (!data) {
       return NextResponse.json(
-        { success: false, message: `No global found for slug "${slug}"` },
+        { success: false, message: `No global found for slug "${slug}"`},
         { status: 404 }
       )
     }
-
     return NextResponse.json({
       success: true,
       slug,
