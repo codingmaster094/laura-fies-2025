@@ -20,7 +20,7 @@ const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 export default buildConfig({
-  serverURL: 'https://www.meanova.de',
+  serverURL: 'https://laura-fies-2025.vercel.app',
   admin: {
     user: Users.slug,
     importMap: {
@@ -28,7 +28,7 @@ export default buildConfig({
     },
   },
   cors: [
-  'https://www.meanova.de',
+  'https://laura-fies-2025.vercel.app',
   'http://localhost:3000'
 ],
   collections: [Users, Media],

@@ -3,7 +3,7 @@ export default async function Alldata(params) {
     const response = await fetch(
       `${
         process.env.NEXT_PUBLIC_BASE_URL ||
-        "https://www.meanova.de/my-route?slug="
+        "https://laura-fies-2025.vercel.app/my-route?slug="
       }${params}`,
       { next: { revalidate: 60 } }
     );

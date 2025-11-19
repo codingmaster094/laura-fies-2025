@@ -3,7 +3,7 @@ export default async function GetSiteMap(params) {
     const response = await fetch(
       `${
         `${process.env.BASE_DOAMAIN}/${params}` ||
-        `https://www.meanova.de/${params}`
+        `https://laura-fies-2025.vercel.app/${params}`
       }`,
       {  next: { revalidate: 60 } }
     );
