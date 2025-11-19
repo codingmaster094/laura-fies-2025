@@ -21,10 +21,37 @@ const Personalvermittlung = (
                                 </div>
                                 <div className='line max-w-225 w-full border-1 border-solid border-grey1'></div>
                                 <div className="text-body space-y-16">
-                                    {Description?.root?.children &&
-                                        Description.root.children.length > 0 &&
-                                        Description.root.children.map((child, index) => {
-                                            return <p key={index}>{child.children[0].text}</p>;
+                                    {Description &&
+                                        Description.map((block, index) => {
+                                            if (block.type === "list") {
+                                                return (
+                                                    <ul key={index} className="leading-snug pl-24 [&_li]:list-disc space-y-16">
+                                                        {block.children.map((item, i) => (
+                                                            <li key={i}>
+                                                                {item.children[0].text}
+                                                            </li>
+                                                        ))}
+                                                    </ul>   
+                                                );
+                                            } else if (block.type === "paragraph") {
+                                                return (
+
+                                                    <p key={index}>
+                                                        {block.children.map((child) => child.text).join(" ")}
+                                                    </p>
+
+                                                );
+                                            } else if (block.type === "heading") {
+                                                return (
+                                                    <h3
+                                                        key={index}
+                                                        className="text-h3 font-medium text-center px-16"
+                                                        dangerouslySetInnerHTML={{ __html: block.children.map((child) => child.text).join(" ") }}
+                                                    ></h3>
+                                                );
+                                            } else {
+                                                return null;
+                                            }
                                         })}
                                 </div>
 

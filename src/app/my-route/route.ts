@@ -2,9 +2,7 @@ import configPromise from '@payload-config'
 import { getPayload } from 'payload'
 import { NextRequest, NextResponse } from 'next/server'
 import type { GlobalSlug } from 'payload'
-
 export const dynamic = 'force-dynamic'
-
 export const GET = async (req: NextRequest) => {
   try {
     const payload = await getPayload({ config: await configPromise })

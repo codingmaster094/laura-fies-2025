@@ -30,22 +30,18 @@ const page = async() => {
         SubHeading={HomePageData?.hero?.SubHeading}
         BG_Image={HomePageData?.hero?.heroImage}
         BTN={HomePageData?.hero?.hero_link}
-        Description={HomePageData?.hero?.richText}
+        Description={HomePageData?.hero?.richText.root.children}
       />
       <Personalvermittlung
         Side_Image={HomePageData?.personalvermittlung?.personalvermittlung_Image}
         Heading={HomePageData?.personalvermittlung?.Heading}
-        SubHeading={HomePageData?.personalvermittlung?.SubHeading}
-        Description={HomePageData?.personalvermittlung?.description}
+        Description={HomePageData?.personalvermittlung?.description.root?.children}
       />
       <Tab2 data={HomePageData.unternehmen}/>
       <OffenStellen 
         SideImage={HomePageData?.offeneStellen?.offeneStellenImage}
         Heading={HomePageData?.offeneStellen?.heading}
-        Description={HomePageData?.offeneStellen?.description}
-        PointHeading={HomePageData?.offeneStellen?.point_heading}
-        Points={HomePageData?.offeneStellen?.points}
-        SubDescription={HomePageData?.offeneStellen?.Subdescription}
+        Description={HomePageData?.offeneStellen?.description.root.children}
         BTN={HomePageData?.offeneStellen?.offeneStellen_link}
       />
      <FAQ

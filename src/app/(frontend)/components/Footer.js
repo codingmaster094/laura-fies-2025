@@ -1,7 +1,7 @@
 'use client';
 import Image from "next/image";
 import Link from "next/link";
-import Lenis from "@studio-freight/lenis";
+  import Lenis from "@studio-freight/lenis";
 import { useEffect, useRef } from "react";
 const Footer = ({ FooterData }) => {
   // Safely destructure data with default empty objects/arrays to ensure data paths exist
@@ -16,7 +16,7 @@ const Footer = ({ FooterData }) => {
   } = FooterData || {}; 
   const navMenus = navigation[0]?.menus ?? [];
 
-   const lenisRef = useRef(null);
+  const lenisRef = useRef(null);
   
     useEffect(() => {
       const scroller = new Lenis({
@@ -85,7 +85,7 @@ const Footer = ({ FooterData }) => {
                   )}
                   {kontakt.phone_urls && (
                     <li>
-                      <Link href={`tel:${kontakt.phone.replace(/[\s()-]/g, '')}`}role='link' className="flex items-start gap-8">
+                      <Link href={`tel:${kontakt.phone_urls.replace(/[\s()-]/g, '')}`}role='link' className="flex items-start gap-8">
                         <Image src="/images/phone.svg" alt="icon of phone" role="img" width={20} height={20} className='w-20 h-20' />
                         <span>{kontakt.phone}</span>
                       </Link>
@@ -103,7 +103,7 @@ const Footer = ({ FooterData }) => {
                 <div className='flex gap-16 justify-start items-center'>
                   {
                     social.map((item, i) => item.social_url ? ( // Check for URL again for the Link prop
-                      <Link href={item.social_url} role="link" key={i}>
+                      <Link href={item.social_url} role="link" target="_blank" key={i}>
                         <Image
                           src={item.social_icon?.url || ''} // Use optional chaining for nested object
                           alt={`${item.social_icon?.title || 'social'} icon`}

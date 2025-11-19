@@ -7,52 +7,6 @@ export default function FAQ({ Section_Show, title, FAQ_Data }) {
       const accordions = Array.from(document.querySelectorAll(".accordion-item"));
       if (!accordions.length) return;
 
-  //       const plusSVG = `<svg width="24" height="24" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-  //   <circle cx="9" cy="9" r="8.25" stroke="#666" stroke-width="1.5"/>
-  //   <path d="M9 5V13" stroke="#666" stroke-width="1.5" stroke-linecap="round"/>
-  //   <path d="M5 9H13" stroke="#666" stroke-width="1.5" stroke-linecap="round"/>
-  // </svg>`;
-
-  // const minusSVG = `<svg width="24" height="24" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-  //   <circle cx="9" cy="9" r="8.25" stroke="#666" stroke-width="1.5"/>
-  //   <path d="M5 9H13" stroke="#666" stroke-width="1.5" stroke-linecap="round"/>
-  // </svg>`;
-
-  // const openItem = (itm) => {
-  //   const content = itm.querySelector(".accordion-content");
-  //   const icon = itm.querySelector(".icon");
-  //   itm.classList.add("active");
-  //   if (content) content.style.maxHeight = `${content.scrollHeight}px`;
-  //   if (icon) icon.innerHTML = minusSVG;
-  // };
-
-  // const toggleItem = (itm) => {
-  //   const content = itm.querySelector(".accordion-content");
-  //   const icon = itm.querySelector(".icon");
-  //   const isActive = itm.classList.contains("active");
-
-  //   if (isActive) {
-  //     itm.classList.remove("active");
-  //     if (content) content.style.maxHeight = "0px";
-  //     if (icon) icon.innerHTML = plusSVG;
-  //   } else {
-  //     itm.classList.add("active");
-  //     if (content) content.style.maxHeight = `${content.scrollHeight}px`;
-  //     if (icon) icon.innerHTML = minusSVG;
-  //   }
-  // };
-
-  // Open all by default
-  // accordions.forEach(openItem);
-
-  // const handlers = accordions.map((item) => {
-  //   const header = item.querySelector(".accordion-header");
-  //   if (!header) return null;
-  //   const handler = () => toggleItem(item);
-  //   header.addEventListener("click", handler);
-  //   return { header, handler };
-  // }).filter(Boolean);
-
   return () => {
     handlers.forEach(({ header, handler }) => {
       if (header && handler) header.removeEventListener("click", handler);

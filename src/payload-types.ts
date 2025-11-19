@@ -424,8 +424,6 @@ export interface Home {
     heroImage?: (string | null) | Media;
     Heading?: string | null;
     SubHeading?: string | null;
-    showParagraph?: boolean | null;
-    showPoints?: boolean | null;
     richText?: {
       root: {
         type: string;
@@ -446,30 +444,10 @@ export interface Home {
       url?: string | null;
       target?: ('_self' | '_blank') | null;
     };
-    isHeroformSection?: boolean | null;
-    heroformsection_Heading?: string | null;
-    heroformsection_items?:
-      | {
-          heroformsection_main_Image?: (string | null) | Media;
-          heroformsection_main_link?: {
-            label?: string | null;
-            url?: string | null;
-            target?: ('_self' | '_blank') | null;
-          };
-          id?: string | null;
-        }[]
-      | null;
-    heroformsection_redirect_Image?: (string | null) | Media;
-    heroformsection_redirect_link?: {
-      label?: string | null;
-      url?: string | null;
-      target?: ('_self' | '_blank') | null;
-    };
   };
   personalvermittlung?: {
     personalvermittlung_Image?: (string | null) | Media;
     Heading?: string | null;
-    SubHeading?: string | null;
     description?: {
       root: {
         type: string;
@@ -585,37 +563,6 @@ export interface Home {
       };
       [k: string]: unknown;
     } | null;
-    point_heading?: string | null;
-    points?: {
-      root: {
-        type: string;
-        children: {
-          type: any;
-          version: number;
-          [k: string]: unknown;
-        }[];
-        direction: ('ltr' | 'rtl') | null;
-        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-        indent: number;
-        version: number;
-      };
-      [k: string]: unknown;
-    } | null;
-    Subdescription?: {
-      root: {
-        type: string;
-        children: {
-          type: any;
-          version: number;
-          [k: string]: unknown;
-        }[];
-        direction: ('ltr' | 'rtl') | null;
-        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-        indent: number;
-        version: number;
-      };
-      [k: string]: unknown;
-    } | null;
     offeneStellen_link?: {
       label?: string | null;
       url?: string | null;
@@ -625,7 +572,6 @@ export interface Home {
   FaqSection?: {
     enableFAQ?: boolean | null;
     Heading?: string | null;
-    SubHeading?: string | null;
     FaqContent?:
       | {
           title?: string | null;
@@ -879,33 +825,8 @@ export interface HomeSelect<T extends boolean = true> {
         heroImage?: T;
         Heading?: T;
         SubHeading?: T;
-        showParagraph?: T;
-        showPoints?: T;
         richText?: T;
         hero_link?:
-          | T
-          | {
-              label?: T;
-              url?: T;
-              target?: T;
-            };
-        isHeroformSection?: T;
-        heroformsection_Heading?: T;
-        heroformsection_items?:
-          | T
-          | {
-              heroformsection_main_Image?: T;
-              heroformsection_main_link?:
-                | T
-                | {
-                    label?: T;
-                    url?: T;
-                    target?: T;
-                  };
-              id?: T;
-            };
-        heroformsection_redirect_Image?: T;
-        heroformsection_redirect_link?:
           | T
           | {
               label?: T;
@@ -918,7 +839,6 @@ export interface HomeSelect<T extends boolean = true> {
     | {
         personalvermittlung_Image?: T;
         Heading?: T;
-        SubHeading?: T;
         description?: T;
       };
   unternehmen?:
@@ -986,9 +906,6 @@ export interface HomeSelect<T extends boolean = true> {
         offeneStellenImage?: T;
         heading?: T;
         description?: T;
-        point_heading?: T;
-        points?: T;
-        Subdescription?: T;
         offeneStellen_link?:
           | T
           | {
@@ -1002,7 +919,6 @@ export interface HomeSelect<T extends boolean = true> {
     | {
         enableFAQ?: T;
         Heading?: T;
-        SubHeading?: T;
         FaqContent?:
           | T
           | {
