@@ -5,8 +5,8 @@ export const Content: Field = {
   name: 'content',
   type: 'group',
   label: {
-    en: 'Hero Section',
-    de: 'Hero Bereich',
+    en: 'content Section',
+    de: 'Inhalt Bereich',
   },
   fields: [
     {
