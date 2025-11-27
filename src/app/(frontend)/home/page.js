@@ -53,7 +53,7 @@ const page = async() => {
         Heading={HomePageData?.kontakt?.Heading}
         SubHeading={HomePageData?.kontakt?.SubHeading}
         FormHeading={HomePageData?.kontakt?.FormHeading}
-        SubmitButton={HomePageData?.kontakt?.sumbimtedButtonLabel}
+        // SubmitButton={HomePageData?.kontakt?.sumbimtedButtonLabel || "Anfrage abschicken"}
         DatenschutzerklarungLink={HomePageData?.kontakt?.DatenschutzerklarungLink}
       />
     </>

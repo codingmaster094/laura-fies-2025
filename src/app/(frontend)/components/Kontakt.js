@@ -8,7 +8,7 @@ const Kontakt = ({
   SubHeading,
   FormHeading,
   DatenschutzerklarungLink,
-  SubmitButton
+//   SubmitButton
 }) => {
   const [form, setForm] = useState({
     role: 'Unternehmen',
@@ -217,9 +217,9 @@ File: ${file ? file.name : 'kein Upload, using developer file path'}
                 </div>
               )}
 
-              <button type="submit" className="!w-full btn-dark cursor-pointer" aria-label={SubmitButton} disabled={loading}>
+              {/* <button type="submit" className="!w-full btn-dark cursor-pointer" aria-label={SubmitButton} disabled={loading}>
                 {loading ? 'Sende...' : {SubmitButton}}
-              </button>
+              </button> */}
             </form>
           </div>
         </div>
