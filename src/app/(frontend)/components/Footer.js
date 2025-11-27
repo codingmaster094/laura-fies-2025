@@ -106,7 +106,7 @@ const Footer = ({ FooterData }) => {
                       <Link href={item.social_url} role="link" target="_blank" key={i}>
                         <Image
                           src={item.social_icon?.url || ''} // Use optional chaining for nested object
-                          alt={`${item.social_icon?.title || 'social'} icon`}
+                          alt={`${item.social_icon?.alt || 'social'} icon`}
                           role="img"
                           width={item.social_icon?.width || 24} // Provide a default width/height
                           height={item.social_icon?.height || 24}

@@ -633,6 +633,23 @@ export interface Impressum {
   id: string;
   title?: string | null;
   slug: string;
+  content?: {
+    richText?: {
+      root: {
+        type: string;
+        children: {
+          type: any;
+          version: number;
+          [k: string]: unknown;
+        }[];
+        direction: ('ltr' | 'rtl') | null;
+        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+        indent: number;
+        version: number;
+      };
+      [k: string]: unknown;
+    } | null;
+  };
   seo?: {
     meta?: {
       title?: string | null;
@@ -662,6 +679,23 @@ export interface Datenschutzerklarung {
   id: string;
   title?: string | null;
   slug: string;
+  content?: {
+    richText?: {
+      root: {
+        type: string;
+        children: {
+          type: any;
+          version: number;
+          [k: string]: unknown;
+        }[];
+        direction: ('ltr' | 'rtl') | null;
+        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+        indent: number;
+        version: number;
+      };
+      [k: string]: unknown;
+    } | null;
+  };
   seo?: {
     meta?: {
       title?: string | null;
@@ -968,6 +1002,11 @@ export interface HomeSelect<T extends boolean = true> {
 export interface ImpressumSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
+  content?:
+    | T
+    | {
+        richText?: T;
+      };
   seo?:
     | T
     | {
@@ -995,6 +1034,11 @@ export interface ImpressumSelect<T extends boolean = true> {
 export interface DatenschutzerklarungSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
+  content?:
+    | T
+    | {
+        richText?: T;
+      };
   seo?:
     | T
     | {

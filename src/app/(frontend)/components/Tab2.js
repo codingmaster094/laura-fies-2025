@@ -43,8 +43,7 @@ const Tab2 = ({ data }) => {
         offset: -80, // adjust for sticky header height
         duration: 1.2,
       });
-    }
-    setIsOpen(false); // close off-canvas if open
+    }// close off-canvas if open
   };
   useEffect(() => {
     const equalizeHeights = () => {

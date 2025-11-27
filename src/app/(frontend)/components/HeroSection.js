@@ -19,7 +19,7 @@ const HeroSection = (
                     <Image
                         className="aspect-square lg:aspect-auto mr-0 ml-auto relative lg:absolute lg:top-0 right-0 lg:-right-3/12 z-0 h-full object-cover"
                         src={BG_Image.url}
-                        alt="hero section image"
+                        alt={BG_Image.alt}
                         role="img"
                         width={1920}
                         height={900}
@@ -30,10 +30,16 @@ const HeroSection = (
                     <div className="container">
                         <div className='h-full relative z-10 flex flex-col space-y-16 lg:mt-0 mt-32 mb-32 lg:mb-0 lg:py-100'>
                             <div className='lg:py-32 lg:px-48 bg-white w-fit font-jakarta font-normal space-y-8'>
+                                {
+                                    Heading && 
                                 <h1 className="text-h1 font-jakarta font-normal leading-snug" dangerouslySetInnerHTML={{ __html: Heading }} ></h1>
+                                }
+                                {
+                                    SubHeading && 
                                 <div className="para text-dark text-h4 leading-snug">
                                     <p dangerouslySetInnerHTML={{ __html: SubHeading }}></p>
                                 </div>
+                                }
                             </div>
                             <div className='lg:py-32 lg:px-48 bg-white w-fit font-jakarta font-normal max-w-[939px] space-y-48'>
                                 {Description &&
